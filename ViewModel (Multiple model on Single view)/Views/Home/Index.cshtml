@@ -1,0 +1,37 @@
+﻿@using ViewModel__Multiple_model_on_Single_view_.Models
+@model IndexVM
+@{
+    ViewBag.Title = "Index";
+}
+
+<h1>Employee List</h1>
+<h6><strong>From Employee Model</strong></h6>
+<table class=" table table-bordered table-hover">
+    <tr><th>Name</th>
+    <th>Email</th>
+    </tr>
+
+    @foreach (var employee in Model.Employees) { 
+    <tr>
+     <td> @employee.Name</td>
+     <td> @employee.Email</td>
+    </tr>
+
+
+    }
+</table>
+<h1>Student List</h1>
+<h6><strong>From Student Model</strong></h6>
+<table class=" table table-bordered table-hover">
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+    </tr>
+    @foreach (var student in Model.Student)
+    {
+        <tr>
+            <td> @student.Name</td>
+            <td> @student.Email</td>
+        </tr>
+    }
+</table>
